@@ -9,19 +9,25 @@ export default class extends Controller {
         const progressBar = document.getElementById('progress-bar');
         let loaded= 0;
 
-        Promise.all(Array.from(images)
-            .filter(img => !img.complete)
-            .map(img => new Promise(resolve => {
-                img.onload = img.onerror = resolve;
-                loaded++;
-                progressBar.innerText = 'Chargement... ' + Math.round(loaded/images.length*100) + '%';
-                progressBar.style.width = Math.round(loaded/images.length*100) + '%';
-            })))
-            .then(() => {
+        [].forEach.call( images, function( img ) {
+            if(img.complete)
+                incrementCounter();
+            else
+                img.addEventListener( 'load', incrementCounter, false );
+        } );
+
+        function incrementCounter() {
+            loaded++;
+            let percent = Math.round(loaded/images.length*100) + '%';
+            progressBar.innerText = 'Chargement... ' + percent;
+            progressBar.style.width = percent;
+            console.log(percent);
+            if ( loaded === images.length ) {
                 console.log('images finished loading');
                 gallery.classList.remove('d-none');
                 progressBar.parentElement.classList.add('d-none');
-            });
+            }
+        }
 
         $('.gallery-link').magnificPopup({
             type: 'image',
