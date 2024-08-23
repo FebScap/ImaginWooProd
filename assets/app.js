@@ -8,5 +8,6 @@ import './vendor/bootstrap/bootstrap.index.js'
 import './vendor/magnific-popup/magnific-popup.index.js'
 import './vendor/magnific-popup/dist/magnific-popup.min.css'
 import './styles/app.css';
+import './styles/styles.css';
 
 console.log('Map Loaded !');
