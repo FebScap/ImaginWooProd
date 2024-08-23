@@ -1,0 +1,169 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ asset('img/intro.jpg') }}" alt="..."/>
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Bienvenue sur le site du </span>
+                        <span class="section-heading-lower">club photo de Waterloo</span>
+                    </h2>
+                    <p class="mb-3">L’objectif de ce club est de favoriser les rencontres entre photographes amateurs ou
+                        professionnels. Le seul impératif pour nous rejoindre est de posséder un appareil
+                        photographique. Que ce soit l'argentique ou le numérique, ce qui nous rassemble, c'est notre
+                        passion commune de la photographie !</p>
+                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="/contact">Nous
+                            rejoindre!</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner bg-faded text-center rounded">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-lower">Le club</span>
+                        </h2>
+                        <p class="mb-0">À l'initiative de deux waterlootois, Valérie et Christophe, l'A.S.B.L.
+                            Imagin'Woo club photo Waterloo a vu le jour au mois d'octobre 2015.
+                            <br>Chaque mois une sortie photo est programmée ainsi qu'une réunion au cours de laquelle
+                            nous visionnons nos images et organisons les sorties et évènements à venir (voir agenda).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-4 d-flex flex-column ms-auto rounded w-50-flex">
+                    <h2 class="section-heading mb-0">
+                        <span class="text-primary fs-5 fw-bold">Exposition 2023 Le coup de cœur du public</span>
+                    </h2>
+                    <p class="mb-0 mt-2" style="line-height: 1.2rem;">Comme chaque année, les visiteurs de l'exposition
+                        ont voté pour élire leur coup de cœur... Voici le top 10 de cette édition 2023</p>
+                </div>
+            </div>
+            <div id="carouselClassementExpo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="4"
+                            aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="5"
+                            aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="6"
+                            aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="7"
+                            aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="8"
+                            aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselClassementExpo" data-bs-slide-to="9"
+                            aria-label="Slide 9"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('img/coupsdecoeurs/01 - SANGUINETTI VALERIE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>1 - Valérie Sanguinetti</h5>
+                            <p>540 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/02 - LAMBERT CARINE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>2 - Carine lambert</h5>
+                            <p>520 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/03 - KENTOS ALAIN.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>3 - Alain Kentos</h5>
+                            <p>473 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/04 - GILLES CARINE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>4 - Carine Gilles</h5>
+                            <p>450 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/05 - KEBERS MARIE CLAUDE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>5 - Marie-Claude Kebers</h5>
+                            <p>432 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/06 - JOET ANNE.jpg') }}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>6 - Anne Joet</h5>
+                            <p>424 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/07 - GALLET MICHELE.jpg') }}" class="d-block w-100 img-hr"
+                             alt="">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>7 - Michèle Gallet</h5>
+                            <p>419 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/08 - LAMBERT CARINE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>8 - Carine Lambert</h5>
+                            <p>417 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/09 - VANDERWAEREN MICHEL.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>9 - Michel Vanderwaeren</h5>
+                            <p>397 Votes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('img/coupsdecoeurs/10 - RIXHON MARIANNE.jpg') }}" class="d-block w-100"
+                             alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>10 - Marianne Rixhon</h5>
+                            <p>396 Votes</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselClassementExpo"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselClassementExpo"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+{% endblock %}

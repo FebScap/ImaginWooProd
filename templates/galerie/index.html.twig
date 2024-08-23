@@ -1,0 +1,287 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imagin'Woo - Galerie des membres{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/galery.css') }}">
+{% endblock %}
+
+{% block dataController %}
+    galery
+{% endblock %}
+
+{% block body %}
+    <section class="page-section container">
+        <div class="about-heading-content mb-4">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 w-100">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-lower">QUELQUES CLICHES DE NOS MEMBRES</span>
+                        </h2>
+                        <p class="mb-0">
+                            Les photographies présentes sur ce site sont la propriété de leurs auteurs et soumises à
+                            Copyright
+                            <br>Tous droits de reproductions interdits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <article class='gallery'>
+            <a class='gallery-link' href='{{ asset('img/galerie/Alex ZIZIKAS 1.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Alex ZIZIKAS 1-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Alex ZIZIKAS</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Alex ZIZIKAS 2.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Alex ZIZIKAS 2-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Alex ZIZIKAS</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Astrid Perron (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Astrid Perron (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Astrid Perron</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Astrid Perron (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Astrid Perron (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Astrid Perron</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Astrid Perron (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Astrid Perron (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Astrid Perron</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Bernard Arnould.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Bernard Arnould-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Bernard Arnould</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Carine Gilles .jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Carine Gilles -min.jpg') }}' width='1000' alt="">
+                    <figcaption>Carine Gilles</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Erwann Le Bihan(1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Erwann Le Bihan(1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Erwann Le Bihan</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Erwann Le Bihan(2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Erwann Le Bihan(2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Erwann Le Bihan</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Erwann le Bihan.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Erwann le Bihan-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Erwann le Bihan</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Erwann le Bihan (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Erwann le Bihan (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Erwann le Bihan</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Giorgio La Cognata.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Giorgio La Cognata-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Giorgio La Cognata</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Jonathan Bryant.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Jonathan Bryant-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Jonathan Bryant</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Magali Bouquiaux.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Magali Bouquiaux-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Magali Bouquiaux</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Michel Siebrand.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Michel Siebrand-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Michel Siebrand</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Michèle Gallet.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Michèle Gallet-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Michèle Gallet</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Natacha Bausier (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Natacha Bausier (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Natacha Bausier</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Natacha Bausier (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Natacha Bausier (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Natacha Bausier</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Natacha Bausier (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Natacha Bausier (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Natacha Bausier</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Nicolas Vanhorle (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Nicolas Vanhorle (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Nicolas Vanhorle</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Nicolas Vanhorle (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Nicolas Vanhorle (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Nicolas Vanhorle</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Nicolas Vanhorle (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Nicolas Vanhorle (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Nicolas Vanhorle</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Nicolas Vanhorle (4).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Nicolas Vanhorle (4)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Nicolas Vanhorle</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Patrick Van Gysegem (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Patrick Van Gysegem (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Patrick Van Gysegem</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Patrick Van Gysegem (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Patrick Van Gysegem (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Patrick Van Gysegem</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Patrick Van Gysegem (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Patrick Van Gysegem (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Patrick Van Gysegem</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Patrick Van Gysegem (4).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Patrick Van Gysegem (4)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Patrick Van Gysegem</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Patrick Van Gysegem (5).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Patrick Van Gysegem (5)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Patrick Van Gysegem</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (4).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (4)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (5).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (5)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (6).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (6)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Valérie Sanguinetti (7).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Valérie Sanguinetti (7)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Valérie Sanguinetti</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Vincent Andrews.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Vincent Andrews-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Vincent Andrews</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Véronique Van Bol (1).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Véronique Van Bol (1)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Véronique Van Bol</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Véronique Van Bol (2).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Véronique Van Bol (2)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Véronique Van Bol</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Véronique Van Bol (3).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Véronique Van Bol (3)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Véronique Van Bol</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Véronique Van Bol (4).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Véronique Van Bol (4)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Véronique Van Bol</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/galerie/Véronique Van Bol (5).jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/galerie/Véronique Van Bol (5)-min.jpg') }}' width='1000' alt="">
+                    <figcaption>Véronique Van Bol</figcaption>
+                </figure>
+            </a>
+        </article>
+    </section>
+{% endblock %}

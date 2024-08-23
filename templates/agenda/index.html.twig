@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imagin'Woo - Agenda{% endblock %}
+
+{% block body %}
+    <section class="page-section container">
+        <div class="about-heading-content mb-4">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-lower">Agenda</span>
+                        </h2>
+                        <p class="mb-0">
+                            Découvrez le planning du club, les dates des prochaines sorties et réunions planifiées.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe src="https://embed.styledcalendar.com/#mt77g2u3fBluZC4uVKoW" title="Styled Calendar"
+                class="styled-calendar-container" style="width: 100%; border: none;"
+                data-cy="calendar-embed-iframe"></iframe>
+        <script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+    </section>
+{% endblock %}

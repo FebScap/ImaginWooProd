@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Imagin'Woo - Galerie des membres{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/galery.css') }}">
+{% endblock %}
+
+{% block dataController %}
+    galery
+{% endblock %}
+
+{% block body %}
+    <section class="page-section container">
+        <div class="about-heading-content mb-4">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 w-100">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="h2">
+                            <span class="section-heading-lower">On parle de nous ...</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <article class='gallery'>
+            <a class='gallery-link' href='{{ asset('img/presse/2016 dec Image Mag.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/2016 dec Image Mag.jpg') }}' width='1000' alt="">
+                    <figcaption>2016 dec Image Mag</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/2020 Oct Waterloo info.JPG') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/2020 Oct Waterloo info.JPG') }}' width='1000' alt="">
+                    <figcaption>2020 Oct Waterloo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/juin 2021  Waterloo info.JPG') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/juin 2021  Waterloo info.JPG') }}' width='1000' alt="">
+                    <figcaption>juin 2021  Waterloo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Nov 2022 Waterloo info 1665.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Nov 2022 Waterloo info 1665.jpg') }}' width='1000' alt="">
+                    <figcaption>Nov 2022 Waterloo info 1665</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Oct 2017 Waterloo info.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Oct 2017 Waterloo info.jpg') }}' width='1000' alt="">
+                    <figcaption>Oct 2017 Waterloo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Oct 2018 Images Mag oct. 2018.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Oct 2018 Images Mag oct. 2018.jpg') }}' width='1000' alt="">
+                    <figcaption>Oct 2018 Images Mag oct. 2018</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Oct 2019 Waterloo info.JPG') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Oct 2019 Waterloo info.JPG') }}' width='1000' alt="">
+                    <figcaption>Oct 2019 Waterloo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Oct 2021 Waterloo info.JPG') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Oct 2021 Waterloo info.JPG') }}' width='1000' alt="">
+                    <figcaption>Oct 2021 Waterloo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/Oct 2023 Waterloo info n°1700.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/Oct 2023 Waterloo info n°1700.jpg') }}' width='1000' alt="">
+                    <figcaption>Oct 2023 Waterloo info n°1700</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/sept 2016 BW.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/sept 2016 BW.jpg') }}' width='1000' alt="">
+                    <figcaption>sept 2016 BW</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/sept 2018 Woo info.JPG') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/sept 2018 Woo info.JPG') }}' width='1000' alt="">
+                    <figcaption>sept 2018 Woo info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/sept 2016 Waterloo-info.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/sept 2016 Waterloo-info.jpg') }}' width='1000' alt="">
+                    <figcaption>sept 2016 Waterloo-info</figcaption>
+                </figure>
+            </a>
+            <a class='gallery-link' href='{{ asset('img/presse/sept 2018 annonce brabanconne.jpg') }}'>
+                <figure class='gallery-image'>
+                    <img loading="lazy" height='1400' src='{{ asset('img/presse/sept 2018 annonce brabanconne.jpg') }}' width='1000' alt="">
+                    <figcaption>sept 2018 annonce brabanconne.jpg</figcaption>
+                </figure>
+            </a>
+        </article>
+    </section>
+{% endblock %}

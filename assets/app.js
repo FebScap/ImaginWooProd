@@ -1,10 +1,12 @@
 import './bootstrap.js';
-/*
- * Welcome to your app's main JavaScript file!
- *
- * This file will be included onto the page via the importmap() Twig function,
- * which should already be in your base.html.twig.
- */
+import jquery from "./vendor/jquery/jquery.index.js";
+const $ = jquery;
+window.$ = window.jQuery = $;
+
+import './vendor/jquery/jquery.index.js'
+import './vendor/bootstrap/bootstrap.index.js'
+import './vendor/magnific-popup/magnific-popup.index.js'
+import './vendor/magnific-popup/dist/magnific-popup.min.css'
 import './styles/app.css';
 
-console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+console.log('Map Loaded !');
