@@ -8,19 +8,12 @@
 ## Installation
 
 ### 1. Récupérer le git 
-     git clone
+     git clone https://github.com/FebScap/ImaginWooProd.git
 
 ### 2. Copier les .env files
 
 ### 3. Lancer le déploiement
      bash deploy.bash
 
-## Installation
-
-### 1. Récupérer le git
-     git clone
-
-### 2. Copier les .env files
-
-### 3. Lancer le déploiement
-     bash deploy.bash
+## Mise à jour du repo
+     bash remoteinstall.bash
