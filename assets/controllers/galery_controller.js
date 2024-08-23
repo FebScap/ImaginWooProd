@@ -26,6 +26,7 @@ export default class extends Controller {
                 console.log('images finished loading');
                 gallery.classList.remove('d-none');
                 progressBar.parentElement.classList.add('d-none');
+                window.scrollTo({ top: 0, behavior: "smooth" });
             }
         }
 
