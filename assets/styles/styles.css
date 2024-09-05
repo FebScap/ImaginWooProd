@@ -6,8 +6,9 @@
     .headDiv {
         display: block !important;
         height: 140px;
-        width: 520px;
+        width: 650px;
         top: 128px;
+        background-color: #005596ff;
     }
 }
 
