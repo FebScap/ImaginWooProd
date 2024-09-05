@@ -6511,6 +6511,7 @@ textarea.form-control-lg {
 .carousel {
     aspect-ratio: 6/4;
     position: relative;
+    left: 5%;
     width: 95%;
 }
 
