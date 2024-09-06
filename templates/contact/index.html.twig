@@ -1,8 +1,78 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Imagin'Woo - Contact{% endblock %}
+
+{% block dataController %}
+    contact
+{% endblock %}
 
 {% block body %}
     <form id="sendMail" action="contact/sendEmail" method="post"></form>
-    <button type="submit" value="test" class="btn btn-primary" form="sendEmail">Primary</button>
+    <div class="container bg-faded rounded m-4 p-4">
+        <div class="py-5 text-center">
+            <h2>Nous contacter</h2>
+            <p class="lead">Afin de nous contacter, veuillez remplir le formulaire suivant, nous nous efforcerons de
+                vous répondre au plus vite.</p>
+        </div>
+
+        <div class="col-md-7 col-lg-8 mx-auto">
+            <h4 class="mb-3">Vos informations</h4>
+            <form class="needs-validation" novalidate="">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="firstName" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Un prénom valide est requis.
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="lastName" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                        <div class="invalid-feedback">
+                            Un nom valide est requis.
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="exemple@nouscontacter.be">
+                        <div class="invalid-feedback">
+                            Un email valide est requis.
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <label for="raison" class="form-label">Raison</label>
+                        <select class="form-select" id="raison" required="">
+                            <option value="">Choisir...</option>
+                            <option>Je souhaite devenir membre</option>
+                            <option>Autres</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Veillez indiquez la raison de votre message.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h4 class="mb-3">Message</h4>
+
+                <div class="col-12">
+                    <label for="contenu"></label>
+                    <textarea class="form-control" id="contenu" rows="3"></textarea>
+                    <div class="invalid-feedback">
+                        Veuillez indiquez le contenu de votre message.
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <button class="w-100 btn btn-primary btn-lg mb-4" type="submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </div>
 {% endblock %}

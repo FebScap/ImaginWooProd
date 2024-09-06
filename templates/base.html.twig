@@ -48,7 +48,7 @@
 </div>
 <footer class="footer text-center">
     <div class="container p-4">
-        <div class="row mt-4">
+        <div class="row mt-4 justify-content-center">
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                 <h5 class="text-uppercase mb-4">Le saviez vous ?</h5>
                 <p>Le nom "Imagin'Woo" provient d'un jeu de mot réfléchi :</p>
@@ -71,11 +71,13 @@
                 </div>
 
                 <h5 class="text-uppercase pt-4 mt-5 mb-4">Sponsors</h5>
-                <div class="mt-4 d-flex flex-row align-items-center">
+                <div class="mt-4 d-flex flex-row align-items-center justify-content-center">
                     <a type="button" target="_blank" href="https://www.casea.be/"
-                       class="btn btn-floating btn-light btn-lg w-50"><img class="img-fluid"
-                                                                           src="{{ asset('img/casea.jpg') }}"
-                                                                           alt="..."/></a>
+                       class="btn btn-floating btn-light btn-lg">
+                        <img class="img-fluid" style="width: 105px; aspect-ratio: 1/1"
+                             src="{{ asset('img/casea.jpg') }}"
+                             alt="..."/>
+                    </a>
                     <p class="align-items-start font-sponsors ms-2">
                         <span class="fw-bold">CASEA ESPACE PHOTO</span>
                         <br>Passage Wellington
