@@ -17,3 +17,7 @@
 
 ## Mise à jour du repo
      bash remoteinstall.bash
+
+## Lancer la DB en local
+    docker compose exec database psql app app
+
