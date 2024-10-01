@@ -2,26 +2,32 @@
 
 namespace App\Controller;
 
+use App\Repository\ActuRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class ActusController extends AbstractController
 {
-    #[Route('/actus/{year?}', name: 'app_actus',  methods: ['GET'])]
-    public function index(?int $year): Response
+    #[Route('/actus/{year?}', name: 'app_actus', methods: ['GET'])]
+    public function index(?int $year, ActuRepository $repository): Response
     {
-        $years = [2021, 2022, 2023, 2024];
-        if ($year == null) {
-            $year = date('Y');
-        } else if (!in_array($year, $years)) {
+        $years = $repository->getAllYears();
+        if ($year == null)
+            $year = $years[sizeof($years) - 1];
+        $actus = $repository->findByYear($year);
+
+        if (in_array($year, $years)) {
+            return $this->render('actus/index.html.twig', [
+                'year' => $year,
+                'years' => $years,
+                'actus' => $actus,
+            ]);
+        } else {
             return $this->render('erreur/index.html.twig', [
-                'error' => "L'année : " . $year . " n'existe pas dans la base de donnée",
+               'error' => "L'année " . $year . " n'existe pas dans les données. " . implode(" ", $years),
             ]);
         }
-        return $this->render('actus/index.html.twig', [
-            'year' => $year,
-        ]);
     }
 
 }

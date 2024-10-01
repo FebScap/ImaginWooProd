@@ -1,9 +1,10 @@
-<?php
+<?php /** @noinspection PhpMultipleClassDeclarationsInspection */
 
 namespace App\Repository;
 
 use App\Entity\Actu;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\DBAL\Exception;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -16,28 +17,29 @@ class ActuRepository extends ServiceEntityRepository
         parent::__construct($registry, Actu::class);
     }
 
-    //    /**
-    //     * @return Actu[] Returns an array of Actu objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('a.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @param $year int Of the year searched
+     * @return Actu[] Returns an array of Actu objects
+     */
+    public function findByYear(int $year): array
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere("a.year = :year")
+            ->setParameter('year', $year)
+            ->orderBy('a.date', 'ASC')
+            ->getQuery()
+            ->getResult();
+    }
 
-    //    public function findOneBySomeField($value): ?Actu
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    /**
+     * @return array|int All years existing in DB
+     */
+    public function getAllYears(): array|int
+    {
+        return $this->createQueryBuilder('a')
+            ->select('a.year')
+            ->orderBy('a.year', 'ASC')
+            ->getQuery()
+            ->getSingleColumnResult();
+    }
 }

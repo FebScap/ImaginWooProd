@@ -10,96 +10,43 @@
     <section class="page-section container">
         <nav aria-label="Page navigation example" class="">
             <ul class="pagination justify-content-center">
-                <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="#"><i class="bi bi-chevron-left me-1"></i>Année suivante</a></li>
-                <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center {% if year == 2024 %}active{% endif %}" href="/actus/2024">2024</a></li>
-                <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center {% if year == 2023 %}active{% endif %}" href="/actus/2023">2023</a></li>
-                <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center {% if year == 2022 %}active{% endif %}" href="/actus/2022">2022</a></li>
-                <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="#">Année précédente<i class="bi bi-chevron-right ms-1"></i></a></li>
+                {% if year-1 in years %}
+                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year-1}) }}"><i class="bi bi-chevron-left ms-1"></i> Année précédente</a></li>
+                {% endif %}
+                {% for y in years %}
+                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center {% if year == y %}active{% endif %}" href="{{ path('app_actus', {'year': y}) }}">{{ y }}</a></li>
+                {% endfor %}
+                {% if year+1 in years %}
+                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year+1}) }}">Année suivante <i class="bi bi-chevron-right me-1"></i></a></li>
+                {% endif %}
             </ul>
         </nav>
     </section>
     <section class="page-section">
-        <div id="cardDiv" class="container d-flex flex-row flex-wrap justify-content-between">
-            <div class="card mb-3 w-49">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/actus/expo2023.jpg') }}" class="img-fluid card-img-fill rounded-start"
-                             alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body text-start h-100 d-flex flex-column justify-content-between p-5">
-                            <h5 class="card-title">EXPOSITION ANNUELLE IMAGIN'WOO</h5>
-                            <p class="card-text">
-                                Imagin’Woo, le club photo de Waterloo vous invite à sa 8ème exposition
-                                photographique...
-                                Couleurs ou noir et blanc ?
-                                Voilà un débat qu’ont décidé de mettre sur le devant de la scène les membres du club
-                                Mieux : ils en ont fait le thème de leur nouvelle et 8e exposition baptisée
-                                "Versus". </p>
-                            <p class="card-text">
-                                <small class="text-body-secondary">
-                                    Du 20 octobre au 5 novembre 2023
-                                </small>
-                            </p>
+        {% for actu in actus %}
+            <div id="cardDiv" class="container d-flex flex-row flex-wrap justify-content-between">
+                <div class="card mb-3 w-49">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{ asset('img/actus/' ~ actu.file ~ '') }}" class="img-fluid card-img-fill rounded-start"
+                                 alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body text-start h-100 d-flex flex-column justify-content-between p-5">
+                                <h5 class="card-title">{{ actu.title }}</h5>
+                                <p class="card-text">
+                                    {{ actu.text }}
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-body-secondary">
+                                        {{ actu.dateString }}
+                                    </small>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card mb-3 w-49">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ asset('img/actus/expo2022.jpg') }}" class="img-fluid card-img-fill rounded-start"
-                             alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body text-start h-100 d-flex flex-column justify-content-between p-5">
-                            <h5 class="card-title">EXPOSITION ANNUELLE IMAGIN'WOO</h5>
-                            <p class="card-text">
-                                Imagin’Woo, le club photo de Waterloo a atteint l’âge de raison. Sept
-                                ans déjà qu’il réunit ses membres, tous passionnés de photos, et animés par l’envie de
-                                partage et de découvertes.
-                                Alors que les éditions 2020 et 2021 des expositions avaient, crise sanitaire oblige,
-                                présenté des travaux très individuels, le club a souhaité pour 2022 se lancer dans un
-                                réel exercice collectif.
-                                Une recherche qui a mobilisé l’ensemble des membres tout au long de l’année, l’idée
-                                était d’aboutir, en plus de l’exposition annuelle, à la réalisation d'un magnifique
-                                livre.
-                                Le livre est disponible sur le site du Livre en papier au prix coûtant de 25,00 eur
-                                cliquez ici pour y accéder
-                            </p>
-                            <p class="card-text">
-                                <small class="text-body-secondary">
-                                    Du 12 au 26 novembre 2022
-                                </small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 w-49">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ asset("img/actus/65-plaisird'hiver.jpg") }}"
-                             class="img-fluid card-img-fill rounded-start"
-                             alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body text-start h-100 d-flex flex-column justify-content-between p-5">
-                            <h5 class="card-title">SORTIE 65 - PLAISIRS D'HIVER</h5>
-                            <p class="card-text">
-                                Dernière sortie de l'année 2021 sous le thème des plaisirs d'hiver ... Escapade au Bois
-                                de la Cambre pour cette première édition.
-                                Du chocolat chaud et de belle photos ...
-                            </p>
-                            <p class="card-text">
-                                <small class="text-body-secondary">
-                                    19 décembre 2021
-                                </small>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </section>
 {% endblock %}

@@ -193,6 +193,7 @@
       <excludeFolder url="file://$MODULE_DIR$/public/phpMyAdmin/vendor/web-auth/webauthn-lib" />
       <excludeFolder url="file://$MODULE_DIR$/public/phpMyAdmin/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/public/phpMyAdmin/vendor/williamdes/mariadb-mysql-kbs" />
+      <excludeFolder url="file://$MODULE_DIR$/var" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
