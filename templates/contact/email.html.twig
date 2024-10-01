@@ -1,12 +1,61 @@
 {# templates/contact/email.html.twig #}
-<h1>Welcome {{ email.toName }}!</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Nouvelle demande de contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
 
-<p>
-    You signed up as {{ username }} the following email:
-</p>
-<p><code>{{ email.to[0].address }}</code></p>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(223, 207, 207, 0.8); /* Couleur de fond avec transparence */
+            padding: 20px;
+            border-radius: 10px; /* Arrondis les coins */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-<p>
-    <a href="#">Activate your account</a>
-    (this link is valid until {{ expiration_date|date('F jS') }})
-</p>
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .info {
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #cdcbcb;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Nouvelle demande de contact</h1>
+    <p>{{ text }}</p>
+    <p>Voici les détails :</p>
+    <p><strong>Nom :</strong> <span class="info">{{ content.first_name }} {{ content.last_name }}</span></p>
+    <p><strong>Email :</strong> <span class="info">{{ content.email }}</span></p>
+    <p><strong>Message :</strong></p>
+    <p>{{ content.message }}</p>
+</div>
+<footer>
+    &copy; 2024 Imagin'Woo. Tous droits réservés. | <a href="https://imaginwoo.be">Visiter notre site</a>
+</footer>
+</body>
+
+</html>
