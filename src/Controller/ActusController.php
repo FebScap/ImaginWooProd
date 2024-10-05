@@ -14,7 +14,7 @@ class ActusController extends AbstractController
     {
         $years = $repository->getAllYears();
         if ($year == null)
-            $year = $years[sizeof($years) - 1];
+            $year = $years[0];
         $actus = $repository->findByYear($year);
 
         if (in_array($year, $years)) {
@@ -24,7 +24,7 @@ class ActusController extends AbstractController
                 'actus' => $actus,
             ]);
         } else {
-            return $this->render('erreur/index.html.twig', [
+            return $this->render('error.html.twig', [
                'error' => "L'année " . $year . " n'existe pas dans les données. " . implode(" ", $years),
             ]);
         }

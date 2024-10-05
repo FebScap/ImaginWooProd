@@ -10,14 +10,14 @@
     <section class="page-section container">
         <nav aria-label="Page navigation example" class="">
             <ul class="pagination justify-content-center">
-                {% if year-1 in years %}
-                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year-1}) }}"><i class="bi bi-chevron-left ms-1"></i> Année précédente</a></li>
+                {% if year+1 in years %}
+                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year+1}) }}"><i class="bi bi-chevron-left ms-1"></i> Page précédente</a></li>
                 {% endif %}
                 {% for y in years %}
                     <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center {% if year == y %}active{% endif %}" href="{{ path('app_actus', {'year': y}) }}">{{ y }}</a></li>
                 {% endfor %}
-                {% if year+1 in years %}
-                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year+1}) }}">Année suivante <i class="bi bi-chevron-right me-1"></i></a></li>
+                {% if year-1 in years %}
+                    <li class="page-item h-auto d-flex align-items-stretch"><a class="page-link d-flex align-items-center" href="{{ path('app_actus', {'year': year-1}) }}">Page suivante <i class="bi bi-chevron-right me-1"></i></a></li>
                 {% endif %}
             </ul>
         </nav>

@@ -39,7 +39,7 @@ class ActuRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('a')
             ->select('a.year')
             ->distinct()
-            ->orderBy('a.year', 'ASC')
+            ->orderBy('a.year', 'DESC')
             ->getQuery()
             ->getSingleColumnResult();
     }
