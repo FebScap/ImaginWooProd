@@ -25,22 +25,24 @@
     <section class="page-section">
         {% for actu in actus %}
             <div id="cardDiv" class="container d-flex flex-row flex-wrap justify-content-between">
-                <div class="card mb-3 w-49">
+                <div class="card mb-3 w-100">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ asset('img/actus/' ~ actu.file ~ '') }}" class="img-fluid card-img-fill rounded-start"
                                  alt="...">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body text-start h-100 d-flex flex-column justify-content-between p-5">
+                            <div class="card-body text-start h-100 d-flex flex-column p-5">
+                                <div>
                                 <h5 class="card-title">{{ actu.title }}</h5>
-                                <p class="card-text">
-                                    {{ actu.text }}
-                                </p>
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        {{ actu.dateString }}
-                                    </small>
+                                    <p class="card-text">
+                                        <small class="text-body-secondary fst-italic">
+                                            {{ actu.dateString }}
+                                        </small>
+                                    </p>
+                                </div>
+                                <p class="card-text my-auto ">
+                                    {{ actu.text|raw }}
                                 </p>
                             </div>
                         </div>

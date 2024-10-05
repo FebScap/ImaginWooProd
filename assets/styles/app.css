@@ -4816,6 +4816,7 @@ textarea.form-control-lg {
     aspect-ratio: 1/1;
     object-fit: cover;
     height: 100% !important;
+    width: 100% !important;
 }
 
 .card-img,
