@@ -1,6 +1,6 @@
 # TODO
 
 1. [ ] Changer la police de le saviez vous
-2. [ ] Couleurs des cartes
+2. [x] Couleurs des cartes
 3. [ ] Barre de choix des années trop large
 4. [ ] Agenda nouvelle couleur pour le vert fluo
