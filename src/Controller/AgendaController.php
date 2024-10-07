@@ -11,7 +11,7 @@ class AgendaController extends AbstractController
     #[Route('/agenda', name: 'app_agenda')]
     public function index(): Response
     {
-        return $this->render('agenda/index.html.twig', [
+        return $this->render('pages/agenda.html.twig', [
             'controller_name' => 'AgendaController',
         ]);
     }

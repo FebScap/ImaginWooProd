@@ -18,13 +18,13 @@ class ActusController extends AbstractController
         $actus = $repository->findByYear($year);
 
         if (in_array($year, $years)) {
-            return $this->render('actus/index.html.twig', [
+            return $this->render('pages/actus.html.twig', [
                 'year' => $year,
                 'years' => $years,
                 'actus' => $actus,
             ]);
         } else {
-            return $this->render('error.html.twig', [
+            return $this->render('components/error.html.twig', [
                'error' => "L'année " . $year . " n'existe pas dans les données. " . implode(" ", $years),
             ]);
         }

@@ -1,0 +1,29 @@
+{% extends 'components/base.html.twig' %}
+
+{% block title %}Imagin'Woo - Créer un compte{% endblock %}
+
+{% block body %}
+    <section class="page-section container">
+        <div class="form-signin w-100 m-auto bg-faded rounded">
+            {{ form_start(form) }}
+            <h1 class="h3 mb-3 fw-normal">Créer un compte</h1>
+
+            {{ form_errors(form) }}
+            <div class="form-floating">
+                <input type="text" value="{{ field_value(form.username) }}" name="{{ field_name(form.username) }}" id="username" class="form-control" autocomplete="username" required autofocus>
+                <label for="username" style="color: black">Pseudo</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" name="{{ field_name(form.plainPassword) }}" value="{{ field_value(form.plainPassword) }}" id="password" class="form-control" autocomplete="current-password" required>
+                <label for="password" style="color: black">Mot de passe</label>
+            </div>
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}"
+            >
+
+            <button class="btn btn-primary w-100 py-2 mt-3" type="submit">S'enregistrer</button>
+            {{ form_end(form) }}
+        </div>
+    </section>
+{% endblock %}
